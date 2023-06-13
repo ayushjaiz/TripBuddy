@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-// const dbConnect = require('./config/dbConnect');
+const dbConnect = require('./config/dbConnect');
 const dotenv = require('dotenv').config();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 
 const app = express();
 
-// dbConnect();
+dbConnect();
 
 app.use(morgan());
 app.use(bodyParser.json());
