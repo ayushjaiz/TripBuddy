@@ -9,6 +9,8 @@ var UserSchema = new Schema({
     address: String,
     journeys: [{type: String, ref: 'Journey'}],
     created_at: {type: Date, default: Date.now()}
+},{
+    timestamps:true
 });
 
 module.exports = mongoose.model('User',UserSchema);
